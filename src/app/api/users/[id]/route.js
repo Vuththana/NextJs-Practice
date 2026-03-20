@@ -35,18 +35,18 @@ export async function PUT(request, { params }) {
     })
 }
 
-export async function GET(_, { params }) {
-    const { id } = await params;
+// export async function DELETE(_, { params }) {
+//     const { id } = await params;
 
-    const data = await prisma.student.delete({
-        where: {
-            id: +id
-        }
-    });
+//     const data = await prisma.student.delete({
+//         where: {
+//             id: +id
+//         }
+//     });
 
-    return NextResponse.json({
-        success: true,
-        message: "Deleted successfully",
-        payload: data
-    });
-}
+//     return NextResponse.json({
+//         success: true,
+//         message: "Deleted successfully",
+//         payload: data
+//     });
+// }

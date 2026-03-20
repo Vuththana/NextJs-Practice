@@ -27,10 +27,10 @@ const students = [
     }
 ]
 
-export async function insertData() {
-    await prisma.student.createMany({data:students});
-}
+// export async function insertData() {
+//     await prisma.student.createMany({data:students});
+// }
 
-insertData().then(() => {
-    prisma.$disconnect();
-})
+// insertData().then(() => {
+//     prisma.$disconnect();
+// })
