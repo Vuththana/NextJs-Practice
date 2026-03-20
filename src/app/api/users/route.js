@@ -5,7 +5,7 @@ export async function GET(req) {
     const {searchParams} = new URL(req.url);
     const name = searchParams.get("name");
     const data = await prisma.student.findMany(
-        {where: !search ? undefined : {
+        {where: !name ? undefined : {
             OR: [
                 {name: {contains:  name, mode: "insensitive"}},
             ]
